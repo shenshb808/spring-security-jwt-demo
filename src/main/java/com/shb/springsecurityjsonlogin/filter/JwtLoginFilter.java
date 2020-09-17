@@ -24,12 +24,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 登录认证
  * @author : Shen Hanbo
  * @date : 2020/9/17 9:57
  */
 public class JwtLoginFilter extends AbstractAuthenticationProcessingFilter {
 
-    protected JwtLoginFilter(String defaultFilterProcessesUrl, AuthenticationManager authenticationManager) {
+    public JwtLoginFilter(String defaultFilterProcessesUrl, AuthenticationManager authenticationManager) {
         super(new AntPathRequestMatcher(defaultFilterProcessesUrl));
         setAuthenticationManager(authenticationManager);
     }
