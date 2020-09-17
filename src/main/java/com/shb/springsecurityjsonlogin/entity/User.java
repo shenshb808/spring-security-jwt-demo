@@ -28,6 +28,10 @@ public class User implements UserDetails {
 
     private List<Role> roleList;
 
+    /**
+     * 将我们自定义的角色集合类转换为Security的权限集合
+     * @return
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> simpleGrantedAuthorities = new ArrayList<>();
